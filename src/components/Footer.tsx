@@ -65,7 +65,7 @@ export default function Footer() {
 
         {/* Bottom bar */}
         <div className="border-t border-[var(--off-white)] pt-5 flex flex-col sm:flex-row items-center justify-between gap-4">
-          <span className="text-[14px] font-bold text-[var(--dark)]">CONNECT<span className="text-[var(--gold)]">CABS</span></span>
+          <Link href="/"><Image src="/logo-icon.png" alt="ConnectCabs" width={100} height={100} className="h-10 w-auto" /></Link>
           <span className="text-[12px] text-[var(--muted-light)]">
             © {new Date().getFullYear()} Connect Cabs Private Limited
           </span>

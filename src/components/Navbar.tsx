@@ -25,87 +25,95 @@ export default function Navbar() {
 
   return (
     <nav
-      className={`fixed top-3 left-1/2 -translate-x-1/2 w-[min(94%,1200px)] z-50
-        rounded-full px-5 md:px-7 py-2.5 flex items-center justify-between
-        border transition-all duration-300
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300
         ${scrolled
-          ? "bg-white/85 border-[var(--border)] shadow-[0_4px_24px_rgba(11,31,58,0.08)]"
-          : "bg-white/95 border-[var(--border)]/60"
+          ? "bg-white/82 border-b border-[var(--border)] shadow-[0_2px_16px_rgba(11,31,58,0.06)]"
+          : "bg-transparent border-b border-[#F1F5F9]"
         }`}
-      style={{ backdropFilter: "blur(16px)", WebkitBackdropFilter: "blur(16px)" }}
+      style={{ backdropFilter: scrolled ? "blur(16px)" : "none", WebkitBackdropFilter: scrolled ? "blur(16px)" : "none" }}
     >
-      <Link href="/" className="flex items-center gap-1.5">
-        <Image src="/logo-n.png" alt="ConnectCabs" width={160} height={48} className="h-14 w-auto" priority />
-      </Link>
+      <div className="max-w-[1200px] mx-auto px-6 flex items-center justify-between py-4">
 
-      {/* Desktop links */}
-      <div className="hidden md:flex items-center gap-7">
-        {links.map((l) => (
-          <Link
-            key={l.label}
-            href={l.href}
-            className="text-[13px] text-[var(--dark)] hover:text-[var(--navy)] transition-colors"
-          >
-            {l.label}
-          </Link>
-        ))}
-      </div>
+        {/* Logo: icon + text */}
+        <Link href="/" className="flex items-center gap-.5">
+          <Image src="/logo-icon.png" alt="ConnectCabs" width={200} height={200} className="h-13 w-auto" priority />
+          <span className="text-[22px] font-extrabold text-[var(--dark)] tracking-tight">
+            Connect<span className="text-[var(--gold)]">Cabs</span>
+          </span>
+        </Link>
 
-      {/* Desktop CTA */}
-      <Link
-        href="#contact"
-        className="hidden md:inline-block bg-[var(--dark)] text-white text-xs font-medium
-          px-5 py-2.5 rounded-full hover:scale-[1.03] transition-transform"
-      >
-        Request a quote
-      </Link>
-
-      {/* Hamburger */}
-      <button
-        onClick={() => setMobileOpen(!mobileOpen)}
-        className="md:hidden p-2"
-        aria-label="Menu"
-      >
-        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-          {mobileOpen ? (
-            <>
-              <line x1="6" y1="6" x2="18" y2="18" />
-              <line x1="6" y1="18" x2="18" y2="6" />
-            </>
-          ) : (
-            <>
-              <line x1="4" y1="7" x2="20" y2="7" />
-              <line x1="4" y1="12" x2="20" y2="12" />
-              <line x1="4" y1="17" x2="20" y2="17" />
-            </>
-          )}
-        </svg>
-      </button>
-
-      {/* Mobile menu */}
-      {mobileOpen && (
-        <div className="absolute top-[calc(100%+8px)] left-0 right-0 bg-white rounded-2xl
-          p-5 border border-[var(--border)] shadow-[0_16px_48px_rgba(11,31,58,0.12)]
-          flex flex-col gap-4 md:hidden">
+        {/* Desktop links */}
+        <div className="hidden md:flex items-center gap-8">
           {links.map((l) => (
             <Link
               key={l.label}
               href={l.href}
-              onClick={() => setMobileOpen(false)}
-              className="text-[15px] font-medium text-[var(--dark)]"
+              className="text-[14px] text-[var(--muted)] hover:text-[var(--dark)] transition-colors"
             >
               {l.label}
             </Link>
           ))}
+        </div>
+
+        {/* Desktop CTA */}
+        <div className="hidden md:flex items-center gap-4">
+          
           <Link
             href="#contact"
-            onClick={() => setMobileOpen(false)}
-            className="bg-[var(--dark)] text-white text-sm font-medium py-3 rounded-xl text-center mt-1"
+            className="bg-[var(--dark)] text-white text-[13px] font-medium
+              px-6 py-2.5 rounded-lg hover:scale-[1.03] transition-transform"
           >
             Request a quote
           </Link>
         </div>
-      )}
+
+        {/* Hamburger */}
+        <button
+          onClick={() => setMobileOpen(!mobileOpen)}
+          className="md:hidden p-2"
+          aria-label="Menu"
+        >
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+            {mobileOpen ? (
+              <>
+                <line x1="6" y1="6" x2="18" y2="18" />
+                <line x1="6" y1="18" x2="18" y2="6" />
+              </>
+            ) : (
+              <>
+                <line x1="4" y1="7" x2="20" y2="7" />
+                <line x1="4" y1="12" x2="20" y2="12" />
+                <line x1="4" y1="17" x2="20" y2="17" />
+              </>
+            )}
+          </svg>
+        </button>
+
+        {/* Mobile menu */}
+        {mobileOpen && (
+          <div className="absolute top-[calc(100%+8px)] left-4 right-4 bg-white rounded-2xl
+            p-5 border border-[var(--border)] shadow-[0_16px_48px_rgba(11,31,58,0.12)]
+            flex flex-col gap-4 md:hidden">
+            {links.map((l) => (
+              <Link
+                key={l.label}
+                href={l.href}
+                onClick={() => setMobileOpen(false)}
+                className="text-[15px] font-medium text-[var(--dark)]"
+              >
+                {l.label}
+              </Link>
+            ))}
+            <Link
+              href="#contact"
+              onClick={() => setMobileOpen(false)}
+              className="bg-[var(--dark)] text-white text-sm font-medium py-3 rounded-xl text-center mt-1"
+            >
+              Request a quote
+            </Link>
+          </div>
+        )}
+      </div>
     </nav>
   );
 }

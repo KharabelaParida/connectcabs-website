@@ -1,0 +1,41 @@
+import Navbar from "@/components/Navbar";
+import Hero from "@/components/Hero";
+import TransitionQuote from "@/components/TransitionQuote";
+import ProblemSection from "@/components/ProblemSection";
+import SolutionsBento from "@/components/SolutionsBento";
+import TechnologySection from "@/components/TechnologySection";
+import HowItWorks from "@/components/HowItWorks";
+import MobilityNetwork from "@/components/MobilityNetwork";
+import FleetSection from "@/components/FleetSection";
+import IndustriesSection from "@/components/IndustriesSection";
+import SafetySection from "@/components/SafetySection";
+import WhySection from "@/components/WhySection";
+import AboutSection from "@/components/AboutSection";
+import CTASection from "@/components/CTASection";
+import Footer from "@/components/Footer";
+
+export default function Home() {
+  return (
+    <>
+      <Navbar />
+      <Hero />
+      <TransitionQuote
+        line1="Your people move."
+        line2="Your business moves"
+        highlight="with them."
+      />
+      <ProblemSection />
+      <SolutionsBento />
+      <TechnologySection />
+      <HowItWorks />
+      <MobilityNetwork />
+      <FleetSection />
+      <IndustriesSection />
+      <SafetySection />
+      <WhySection />
+      <AboutSection />
+      <CTASection />
+      <Footer />
+    </>
+  );
+}

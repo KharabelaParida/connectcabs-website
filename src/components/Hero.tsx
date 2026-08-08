@@ -6,7 +6,25 @@ import Link from "next/link";
 export default function Hero() {
   return (
     <section className="pt-10 bg-[var(--off-white)]">
-      <div className="max-w-[1200px] mx-auto px-6 pt-16 md:pt-20 pb-16 md:pb-24">
+      <div className="max-w-[1200px] mx-auto px-6 pt-16 md:pt-20 pb-16 md:pb-24 relative">
+        {/* Mobile background graphic */}
+        <svg
+          viewBox="0 0 400 400"
+          className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[360px] h-[360px] opacity-[0.07] lg:hidden pointer-events-none"
+        >
+          <circle cx="200" cy="200" r="165" fill="none" stroke="#0B3B78" strokeWidth="1.5" />
+          <circle cx="200" cy="200" r="125" fill="none" stroke="#0B3B78" strokeWidth="1" />
+          <circle cx="200" cy="200" r="85" fill="none" stroke="#0B3B78" strokeWidth="0.8" />
+          <path d="M 200 35 A 165 165 0 0 1 365 200" fill="none" stroke="#FFB000" strokeWidth="3" strokeLinecap="round" />
+          <path d="M 75 200 A 125 125 0 0 1 200 75" fill="none" stroke="#FFB000" strokeWidth="2" strokeLinecap="round" />
+          <circle cx="200" cy="35" r="7" fill="#0B3B78" />
+          <circle cx="365" cy="200" r="7" fill="#FFB000" />
+          <circle cx="200" cy="200" r="28" fill="#0B3B78" />
+          <circle cx="200" cy="200" r="11" fill="#FFB000" />
+          <circle cx="295" cy="95" r="4" fill="#FFB000" />
+          <circle cx="110" cy="305" r="3" fill="#0B3B78" />
+          <circle cx="315" cy="315" r="3.5" fill="#FFB000" />
+        </svg>
         <FadeIn>
           <span className="text-[11px] font-medium tracking-[2px] uppercase text-[var(--label-gold)] block mb-5">
             Enterprise mobility

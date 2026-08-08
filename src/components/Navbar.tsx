@@ -38,7 +38,7 @@ export default function Navbar() {
         <Link href="/" className="flex items-center gap-.5">
           <Image src="/logo-icon.png" alt="ConnectCabs" width={200} height={200} className="h-13 w-auto" priority />
           <span className="text-[22px] font-extrabold text-[var(--dark)] tracking-tight">
-            Connect<span className="text-[var(--gold)]">Cabs</span>
+            CONNECT<span className="text-[var(--gold)]">CABS</span>
           </span>
         </Link>
 

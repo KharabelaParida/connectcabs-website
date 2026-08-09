@@ -5,7 +5,6 @@ import ProblemSection from "@/components/ProblemSection";
 import SolutionsBento from "@/components/SolutionsBento";
 import TechnologySection from "@/components/TechnologySection";
 import HowItWorks from "@/components/HowItWorks";
-import MobilityNetwork from "@/components/MobilityNetwork";
 import FleetSection from "@/components/FleetSection";
 import IndustriesSection from "@/components/IndustriesSection";
 import SafetySection from "@/components/SafetySection";
@@ -28,7 +27,6 @@ export default function Home() {
       <SolutionsBento />
       <TechnologySection />
       <HowItWorks />
-      <MobilityNetwork />
       <FleetSection />
       <IndustriesSection />
       <SafetySection />

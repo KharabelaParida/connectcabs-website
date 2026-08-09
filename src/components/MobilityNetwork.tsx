@@ -17,8 +17,8 @@ export default function MobilityNetwork() {
           </h2>
         </FadeIn>
         <FadeIn delay={0.1}>
-          <div className="bg-[var(--off-white)] rounded-3xl p-8 md:p-12 flex flex-col items-center overflow-hidden">
-            <svg viewBox="0 0 740 420" className="w-full" style={{ maxWidth: 740 }}>
+          <div className="bg-[var(--off-white)] rounded-3xl p-4 sm:p-8 md:p-12 flex flex-col items-center overflow-x-auto">
+            <svg viewBox="0 0 740 420" className="w-full min-w-[600px] sm:min-w-0" style={{ maxWidth: 740 }}>
 
               {/* Hex grid background */}
               <g stroke="#0B3B78" strokeOpacity="0.04" strokeWidth="0.8" fill="none">

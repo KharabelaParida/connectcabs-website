@@ -3,7 +3,7 @@ import "./globals.css";
 import WhatsAppButton from "@/components/WhatsAppButton";
 
 export const metadata: Metadata = {
-  title: "Connect Cabs — Enterprise Mobility Solutions for Modern Businesses",
+  title: "Connect Cabs - Enterprise Mobility Solutions for Modern Businesses",
   description:
     "Reliable employee transportation, executive travel, airport transfers and corporate mobility — managed through one trusted partner. Connect Cabs Private Limited, Bhubaneswar.",
   keywords: [

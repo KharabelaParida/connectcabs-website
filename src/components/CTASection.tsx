@@ -21,7 +21,7 @@ export default function CTASection() {
             </p>
             <div className="flex gap-3.5 justify-center flex-wrap">
               <Link
-                href="#contact"
+                href="https://wa.me/918277840505?text=Hi%20Connect%20Cabs%2C%20I%20would%20like%20to%20know%20more%20about%20your%20services." target="_blank"
                 className="bg-[var(--gold)] text-[var(--dark)] text-[15px] font-medium px-7 py-4
                   rounded-xl hover:-translate-y-0.5 hover:shadow-[0_8px_32px_rgba(255,176,0,0.3)]
                   transition-all duration-200"
@@ -29,7 +29,7 @@ export default function CTASection() {
                 Request a quote
               </Link>
               <Link
-                href="#contact"
+                href="https://wa.me/918277840505?text=Hi%20Connect%20Cabs%2C%20I%20would%20like%20to%20know%20more%20about%20your%20services." target="_blank"
                 className="text-white text-[15px] font-medium px-7 py-4 rounded-xl
                   border border-white/20 hover:border-white/50 transition-colors duration-200"
               >

@@ -17,76 +17,95 @@ export default function SolutionsBento() {
           </h2>
         </FadeIn>
 
-        {/* Row 1: large + medium */}
-        <div className="grid grid-cols-1 md:grid-cols-[1.6fr_1fr] gap-3.5 mb-3.5">
+        {/* Row 1: 3 cards */}
+        <div className="grid grid-cols-1 md:grid-cols-[1.5fr_1fr_1fr] gap-3 mb-10">
           <FadeIn>
             <div
-              className="rounded-2xl p-8 md:p-9 min-h-[200px] flex flex-col justify-end
+              className="rounded-2xl p-7 min-h-[180px] flex flex-col justify-between
                 hover:scale-[1.01] transition-transform duration-300"
               style={{ background: "linear-gradient(135deg, var(--navy), var(--deep-navy))" }}
             >
-              <div className="text-[var(--soft-navy)] text-[10px] tracking-[1.5px] mb-2.5">
-                CORE SERVICE
-              </div>
-              <div className="text-white text-[24px] md:text-[26px] font-medium mb-2.5">
-                Employee transportation
-              </div>
-              <div className="text-[#B8C6DC] text-[14px] max-w-[300px] leading-relaxed">
-                Scheduled pickups and drops, managed at scale across shifts and locations.
+              <span className="text-[var(--gold)] text-[28px] font-extrabold">01</span>
+              <div>
+                <div className="text-white text-[20px] font-semibold mb-1">Employee transportation</div>
+                <div className="text-[#B8C6DC] text-[12px]">Scheduled pickups at scale</div>
               </div>
             </div>
           </FadeIn>
-          <FadeIn delay={0.1}>
+          <FadeIn delay={0.08}>
             <div
-              className="bg-[var(--gold)] rounded-2xl p-7 md:p-8 min-h-[200px] flex flex-col justify-end
+              className="bg-[var(--gold)] rounded-2xl p-6 min-h-[180px] flex flex-col justify-between
                 hover:scale-[1.02] transition-transform duration-300"
             >
-              <div className="text-[var(--dark-gold)] text-[10px] tracking-[1.5px] mb-2">
-                PREMIUM
+              <span className="text-[var(--dark-gold)] text-[28px] font-extrabold">02</span>
+              <div>
+                <div className="text-[var(--dark)] text-[17px] font-semibold">Executive mobility</div>
+                <div className="text-[var(--dark-gold)] text-[12px]">Premium travel</div>
               </div>
-              <div className="text-[var(--dark)] text-[22px] font-medium">
-                Executive mobility
+            </div>
+          </FadeIn>
+          <FadeIn delay={0.16}>
+            <div
+              className="bg-white border border-[var(--border)] rounded-2xl p-6 min-h-[180px] flex flex-col justify-between
+                hover:scale-[1.02] transition-transform duration-300"
+            >
+              <span className="text-[var(--gold)] text-[28px] font-extrabold">03</span>
+              <div>
+                <div className="text-[var(--dark)] text-[17px] font-semibold">Airport transfers</div>
+                <div className="text-[var(--muted-light)] text-[12px]">Monitored pickups</div>
               </div>
             </div>
           </FadeIn>
         </div>
 
-        {/* Row 2: three equal */}
-        <div className="grid grid-cols-1 sm:grid-cols-3 gap-3.5 mb-3.5">
-          {[
-            { title: "Airport transfers", desc: "Monitored pickups" },
-            { title: "Intercity travel", desc: "Multi-city routes" },
-            { title: "Managed fleet", desc: "Verified chauffeurs" },
-          ].map((s, i) => (
-            <FadeIn key={i} delay={i * 0.08}>
-              <div
-                className="bg-white rounded-2xl p-6 border border-[var(--border)]
-                  hover:-translate-y-1 hover:shadow-[0_12px_32px_rgba(11,31,58,0.08)]
-                  transition-all duration-300"
-              >
-                <div className="text-[var(--dark)] text-[16px] font-medium mb-1">{s.title}</div>
-                <div className="text-[var(--muted)] text-[12px]">{s.desc}</div>
-              </div>
-            </FadeIn>
-          ))}
-        </div>
-
-        {/* Row 3 */}
-        <div className="grid grid-cols-1 md:grid-cols-[1fr_1.5fr] gap-3.5">
+        {/* Row 2: 4 cards */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-3">
           <FadeIn>
-            <div className="bg-[var(--light-blue)] rounded-2xl p-6 hover:-translate-y-1 transition-transform duration-300">
-              <div className="text-[var(--dark)] text-[16px] font-medium mb-1">
-                Corporate events & MICE
+            <div
+              className="bg-white border border-[var(--border)] rounded-2xl p-6 min-h-[160px] flex flex-col justify-between
+                hover:scale-[1.02] transition-transform duration-300"
+            >
+              <span className="text-[var(--gold)] text-[28px] font-extrabold">04</span>
+              <div>
+                <div className="text-[var(--dark)] text-[16px] font-semibold">Intercity travel</div>
+                <div className="text-[var(--muted-light)] text-[12px]">Multi-city routes</div>
               </div>
-              <div className="text-[var(--muted)] text-[12px]">Group logistics</div>
             </div>
           </FadeIn>
-          <FadeIn delay={0.1}>
-            <div className="bg-[var(--dark)] rounded-2xl p-6 hover:-translate-y-1 transition-transform duration-300">
-              <div className="text-white text-[16px] font-medium mb-1">
-                Business travel & accommodation
+          <FadeIn delay={0.08}>
+            <div
+              className="bg-white border border-[var(--border)] rounded-2xl p-6 min-h-[160px] flex flex-col justify-between
+                hover:scale-[1.02] transition-transform duration-300"
+            >
+              <span className="text-[var(--gold)] text-[28px] font-extrabold">05</span>
+              <div>
+                <div className="text-[var(--dark)] text-[16px] font-semibold">Managed fleet</div>
+                <div className="text-[var(--muted-light)] text-[12px]">Verified chauffeurs</div>
               </div>
-              <div className="text-[var(--soft-navy)] text-[12px]">Hotels, flights, itinerary planning</div>
+            </div>
+          </FadeIn>
+          <FadeIn delay={0.16}>
+            <div
+              className="bg-[var(--dark)] rounded-2xl p-6 min-h-[160px] flex flex-col justify-between
+                hover:scale-[1.01] transition-transform duration-300"
+            >
+              <span className="text-[var(--gold)] text-[28px] font-extrabold">06</span>
+              <div>
+                <div className="text-white text-[16px] font-semibold">Corporate events & MICE</div>
+                <div className="text-[var(--soft-navy)] text-[12px]">Group logistics, conferences</div>
+              </div>
+            </div>
+          </FadeIn>
+          <FadeIn delay={0.24}>
+            <div
+              className="bg-[var(--light-blue)] rounded-2xl p-6 min-h-[160px] flex flex-col justify-between
+                hover:scale-[1.02] transition-transform duration-300"
+            >
+              <span className="text-[var(--gold)] text-[28px] font-extrabold">07</span>
+              <div>
+                <div className="text-[var(--dark)] text-[16px] font-semibold">Business travel</div>
+                <div className="text-[var(--muted-light)] text-[12px]">Hotels, flights, itinerary</div>
+              </div>
             </div>
           </FadeIn>
         </div>

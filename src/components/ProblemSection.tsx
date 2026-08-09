@@ -3,11 +3,11 @@
 import FadeIn from "./FadeIn";
 
 const problems = [
-  { n: "01", title: "Multiple vendors", desc: "Fragmented, no single point of control." },
-  { n: "02", title: "Manual coordination", desc: "Calls, spreadsheets, WhatsApp." },
-  { n: "03", title: "Limited visibility", desc: "No real-time tracking." },
-  { n: "04", title: "Safety gaps", desc: "Unverified drivers, no SOPs." },
-  { n: "05", title: "Billing complexity", desc: "No consolidated reporting." },
+  { n: "01", title: "Multiple Vendors", desc: "Fragmented, no single point of control." },
+  { n: "02", title: "Manual Coordination", desc: "Calls, spreadsheets, WhatsApp." },
+  { n: "03", title: "Limited Visibility", desc: "No real-time tracking." },
+  { n: "04", title: "Safety Gaps", desc: "Unverified drivers, no SOPs." },
+  { n: "05", title: "Billing Complexity", desc: "No consolidated reporting." },
 ];
 
 export default function ProblemSection() {
@@ -25,48 +25,57 @@ export default function ProblemSection() {
           </h2>
         </FadeIn>
 
-        {/* Row 1 */}
-        <div className="grid grid-cols-1 md:grid-cols-[1.4fr_1fr] gap-3.5 mb-3.5">
+        {/* Row 1: 2 cards */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-10">
           {problems.slice(0, 2).map((p, i) => (
             <FadeIn key={i} delay={i * 0.1}>
-              <div className="bg-[var(--off-white)] rounded-2xl p-7 relative overflow-hidden
-                hover:-translate-y-1 transition-transform duration-300 min-h-[100px]">
-                <span className="absolute top-2.5 right-4 text-[52px] font-medium text-[var(--light-blue)]">
+              <div className="bg-[var(--off-white)] rounded-2xl p-6 flex gap-4 items-start
+                hover:-translate-y-1 transition-transform duration-300">
+                <span className="text-[var(--gold)] text-[32px] font-extrabold leading-none flex-none">
                   {p.n}
                 </span>
-                <div className="text-[var(--dark)] text-[16px] font-medium mb-1.5">{p.title}</div>
-                <div className="text-[var(--muted)] text-[13px]">{p.desc}</div>
+                <div>
+                  <div className="text-[var(--dark)] text-[15px] font-semibold mb-0.5">{p.title}</div>
+                  <div className="text-[var(--muted-light)] text-[12px]">{p.desc}</div>
+                </div>
               </div>
             </FadeIn>
           ))}
         </div>
 
-        {/* Row 2 */}
-        <div className="grid grid-cols-1 md:grid-cols-[1fr_1fr_1.2fr] gap-3.5">
+        {/* Row 2: 3 cards */}
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 mb-10">
           {problems.slice(2).map((p, i) => (
             <FadeIn key={i} delay={(i + 2) * 0.1}>
-              <div
-                className={`rounded-2xl p-6 relative overflow-hidden min-h-[90px]
-                  hover:-translate-y-1 transition-transform duration-300
-                  ${i === 2 ? "bg-[var(--navy)]" : "bg-[var(--off-white)]"}`}
-              >
-                {i < 2 && (
-                  <span className="absolute top-2.5 right-3.5 text-[48px] font-medium text-[var(--light-blue)]">
-                    {p.n}
-                  </span>
-                )}
-                <div
-                  className={`text-[15px] font-medium mb-1 ${i === 2 ? "text-[var(--gold)]" : "text-[var(--dark)]"}`}
-                >
-                  {i === 2 ? "ConnectCabs brings it together." : p.title}
-                </div>
-                <div className={`text-[12px] ${i === 2 ? "text-[var(--soft-navy)]" : "text-[var(--muted)]"}`}>
-                  {i === 2 ? "One partner. Full visibility." : p.desc}
+              <div className="bg-[var(--off-white)] rounded-2xl p-6 flex gap-4 items-start
+                hover:-translate-y-1 transition-transform duration-300">
+                <span className="text-[var(--gold)] text-[32px] font-extrabold leading-none flex-none">
+                  {p.n}
+                </span>
+                <div>
+                  <div className="text-[var(--dark)] text-[15px] font-semibold mb-0.5">{p.title}</div>
+                  <div className="text-[var(--muted-light)] text-[12px]">{p.desc}</div>
                 </div>
               </div>
             </FadeIn>
           ))}
         </div>
+
+        {/* Answer bar */}
+        <FadeIn delay={0.5}>
+          <div className="bg-[var(--dark)] rounded-2xl p-6 flex items-center justify-between
+            hover:-translate-y-1 transition-transform duration-300">
+            <div>
+              <div className="text-[var(--gold)] text-[17px] font-bold">
+                Connect Cabs brings it together.
+              </div>
+              <div className="text-[var(--soft-navy)] text-[13px]">
+                One partner. Full visibility. No complexity.
+              </div>
+            </div>
+            <span className="text-[var(--gold)] text-[24px] hidden sm:block">→</span>
+          </div>
+        </FadeIn>
       </div>
     </section>
   );

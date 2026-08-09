@@ -2,77 +2,115 @@
 
 import FadeIn from "./FadeIn";
 
+const features = [
+  "GPS-enabled fleet tracking",
+  "Digital booking & dispatch",
+  "Real-time trip monitoring",
+  "Automated confirmations",
+  "Corporate account management",
+  "MIS reporting & analytics",
+];
+
 export default function TechnologySection() {
   return (
     <section id="technology" className="py-20">
       <div className="max-w-[1200px] mx-auto px-6">
-        <div
-          className="rounded-3xl p-8 md:p-12 lg:p-14 relative overflow-hidden"
-          style={{ background: "linear-gradient(160deg, var(--navy), var(--deep-navy))" }}
-        >
-          <FadeIn>
-            <span className="text-[11px] font-medium tracking-[2px] uppercase text-[var(--gold)] block mb-3.5">
-              Technology
-            </span>
-          </FadeIn>
-          <FadeIn>
-            <h2 className="text-white text-[28px] md:text-[32px] lg:text-[36px] font-medium tracking-tight mb-9 max-w-[420px] leading-[1.15]">
-              Transportation managed with technology.
-            </h2>
-          </FadeIn>
-
-          <FadeIn delay={0.15}>
-            <div
-              className="bg-white rounded-2xl p-6 md:p-7"
-              style={{ boxShadow: "0 24px 64px rgba(0,0,0,0.25)" }}
-            >
-              {/* Dashboard header */}
-              <div className="flex justify-between items-center mb-5">
-                <span className="text-[var(--dark)] text-[15px] font-medium">
-                  Mobility control layer
-                </span>
-                <div className="flex gap-1.5">
-                  <span className="w-2 h-2 rounded-full bg-green-500" />
-                  <span className="w-2 h-2 rounded-full bg-[var(--gold)]" />
-                  <span className="w-2 h-2 rounded-full bg-[var(--border)]" />
-                </div>
-              </div>
-
-              {/* Row 1 */}
-              <div className="grid grid-cols-1 sm:grid-cols-3 gap-2.5 mb-3">
-                {[
-                  { label: "Fleet", value: "Active vehicles", bg: "bg-[var(--off-white)]", color: "text-[var(--dark)]" },
-                  { label: "Trips", value: "In progress", bg: "bg-[var(--off-white)]", color: "text-[var(--dark)]" },
-                  { label: "Alerts", value: "Route deviation", bg: "bg-[var(--light-gold)]", color: "text-[#8A5B00]" },
-                ].map((d, i) => (
-                  <div key={i} className={`${d.bg} rounded-xl p-3.5`}>
-                    <div className="text-[var(--muted-light)] text-[11px] mb-1">{d.label}</div>
-                    <div className={`${d.color} text-[14px] font-medium`}>{d.value}</div>
+        <FadeIn>
+          <div
+            className="rounded-3xl p-8 md:p-12 lg:p-14 grid grid-cols-1 lg:grid-cols-[0.9fr_1.1fr] gap-10 lg:gap-14 items-center relative overflow-hidden"
+            style={{ background: "linear-gradient(160deg, var(--navy), var(--deep-navy))" }}
+          >
+            {/* Left: headline + features */}
+            <div>
+              <span className="text-[var(--gold)] text-[11px] font-medium tracking-[2px] uppercase block mb-3.5">
+                Technology
+              </span>
+              <h2 className="text-white text-[28px] md:text-[32px] lg:text-[36px] font-medium tracking-tight mb-8 leading-[1.15]">
+                Transportation managed with technology.
+              </h2>
+              <div className="flex flex-col">
+                {features.map((f, i) => (
+                  <div
+                    key={i}
+                    className={`py-3.5 flex gap-3 items-center ${
+                      i < features.length - 1 ? "border-b border-white/[0.08]" : ""
+                    }`}
+                  >
+                    <div className="w-1.5 h-1.5 rounded-full bg-[var(--gold)] flex-none" />
+                    <span className="text-[#B8C6DC] text-[13px]">{f}</span>
                   </div>
                 ))}
               </div>
+            </div>
 
-              {/* Row 2 */}
-              <div className="grid grid-cols-1 sm:grid-cols-[2fr_1fr] gap-2.5">
-                <div className="bg-[var(--off-white)] rounded-xl p-3.5">
-                  <div className="text-[var(--muted-light)] text-[11px] mb-1">Trip detail</div>
-                  <div className="text-[var(--dark)] text-[14px] font-medium">BBS Airport → Tech Park</div>
-                  <div className="text-[var(--muted-light)] text-[12px]">Driver: Assigned · ETA visible</div>
+            {/* Right: dashboard mockup */}
+            <div
+              className="bg-white rounded-2xl p-5 md:p-6"
+              style={{ boxShadow: "0 24px 64px rgba(0,0,0,0.3)" }}
+            >
+              {/* Header */}
+              <div className="flex justify-between items-center mb-4 pb-3 border-b border-[var(--off-white)]">
+                <span className="text-[var(--dark)] text-[13px] font-semibold">ConnectCabs Platform</span>
+                <div className="bg-[var(--light-blue)] rounded-md px-2.5 py-1 text-[10px] text-[var(--navy)] font-medium">
+                  Live
                 </div>
-                <div className="bg-[var(--dark)] rounded-xl p-3.5">
-                  <div className="text-[var(--soft-navy)] text-[11px] mb-1">Reports</div>
-                  <div className="text-white text-[14px] font-medium">MIS ready</div>
+              </div>
+
+              {/* Stats row */}
+              <div className="grid grid-cols-3 gap-2 mb-2.5">
+                <div className="bg-[var(--off-white)] rounded-xl p-3">
+                  <div className="text-[var(--muted-light)] text-[10px]">Fleet</div>
+                  <div className="text-[var(--dark)] text-[16px] font-bold">Active</div>
+                  <div className="text-[var(--muted-light)] text-[10px]">vehicles on road</div>
+                </div>
+                <div className="bg-[var(--off-white)] rounded-xl p-3">
+                  <div className="text-[var(--muted-light)] text-[10px]">Trips</div>
+                  <div className="text-[var(--dark)] text-[16px] font-bold">In progress</div>
+                  <div className="text-[var(--muted-light)] text-[10px]">being monitored</div>
+                </div>
+                <div className="bg-[var(--light-gold)] rounded-xl p-3">
+                  <div className="text-[#8A5B00] text-[10px]">Alerts</div>
+                  <div className="text-[var(--dark)] text-[16px] font-bold">Route</div>
+                  <div className="text-[#8A5B00] text-[10px]">deviation flagged</div>
+                </div>
+              </div>
+
+              {/* Trip detail */}
+              <div className="bg-[var(--off-white)] rounded-xl p-3 mb-2.5">
+                <div className="flex justify-between items-center">
+                  <div>
+                    <div className="text-[var(--muted-light)] text-[10px]">Active trip</div>
+                    <div className="text-[var(--dark)] text-[13px] font-semibold">BBS Airport → Tech Park</div>
+                  </div>
+                  <div className="bg-[var(--navy)] rounded-md px-2.5 py-1 text-[10px] text-white font-medium">
+                    On route
+                  </div>
+                </div>
+                <div className="h-[3px] bg-[var(--border)] rounded-full mt-2.5">
+                  <div className="w-[65%] h-full bg-[var(--gold)] rounded-full" />
+                </div>
+              </div>
+
+              {/* Bottom row */}
+              <div className="grid grid-cols-2 gap-2">
+                <div className="bg-[var(--off-white)] rounded-xl p-3">
+                  <div className="text-[var(--muted-light)] text-[10px]">Driver</div>
+                  <div className="text-[var(--dark)] text-[12px] font-semibold">Assigned · Verified</div>
+                </div>
+                <div className="bg-[var(--dark)] rounded-xl p-3">
+                  <div className="text-[var(--soft-navy)] text-[10px]">Reports</div>
+                  <div className="text-white text-[12px] font-semibold">MIS ready</div>
                 </div>
               </div>
             </div>
-          </FadeIn>
 
-          {/* Decorative */}
-          <svg className="absolute -top-8 -right-8 opacity-5" width="200" height="200">
-            <circle cx="100" cy="100" r="90" fill="none" stroke="#fff" strokeWidth="1" />
-            <circle cx="100" cy="100" r="55" fill="none" stroke="#fff" strokeWidth="1" />
-          </svg>
-        </div>
+            {/* Decorative */}
+            <svg className="absolute -top-8 -right-8 opacity-5 pointer-events-none" width="200" height="200">
+              <circle cx="100" cy="100" r="90" fill="none" stroke="#fff" strokeWidth="1" />
+              <circle cx="100" cy="100" r="55" fill="none" stroke="#fff" strokeWidth="1" />
+            </svg>
+          </div>
+        </FadeIn>
       </div>
     </section>
   );

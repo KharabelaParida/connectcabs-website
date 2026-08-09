@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import WhatsAppButton from "@/components/WhatsAppButton";
 
 export const metadata: Metadata = {
   title: "ConnectCabs — Enterprise Mobility Solutions for Modern Businesses",
@@ -39,6 +40,7 @@ export default function RootLayout({
       </head>
       <body className="antialiased" style={{ fontFamily: "'Inter', system-ui, -apple-system, sans-serif" }}>
         {children}
+        <WhatsAppButton />
       </body>
     </html>
   );

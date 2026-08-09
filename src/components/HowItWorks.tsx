@@ -3,53 +3,58 @@
 import FadeIn from "./FadeIn";
 
 const steps = [
-  { n: "01", label: "Requirement" },
-  { n: "02", label: "Planning" },
-  { n: "03", label: "Allocation" },
-  { n: "04", label: "Monitoring" },
-  { n: "05", label: "Reporting" },
+  { n: "01", title: "Requirement", desc: "Share your routes, shifts & headcount" },
+  { n: "02", title: "Planning", desc: "We design the mobility solution" },
+  { n: "03", title: "Allocation", desc: "Vehicle & Driver assigned" },
+  { n: "04", title: "Monitoring", desc: "Real-time trip tracking" },
+  { n: "05", title: "Reporting", desc: "MIS & consolidated billing delivered" },
 ];
 
 export default function HowItWorks() {
   return (
     <section className="py-20 bg-[var(--off-white)]">
       <div className="max-w-[1200px] mx-auto px-6">
-        <FadeIn>
-          <span className="text-[11px] font-medium tracking-[2px] uppercase text-[var(--label-gold)] block mb-3.5">
-            How it works
-          </span>
-        </FadeIn>
-        <FadeIn>
-          <h2 className="text-[28px] md:text-[32px] font-medium tracking-tight text-[var(--dark)] mb-9 leading-[1.15]">
-            From requirement to reporting.
-          </h2>
-        </FadeIn>
-        <FadeIn>
-          <div className="flex gap-1.5 overflow-x-auto pb-2 scrollbar-hide">
+        <div className="grid grid-cols-1 lg:grid-cols-[0.8fr_1.2fr] gap-10 lg:gap-14 items-center">
+
+          {/* Left: headline */}
+          <div>
+            <FadeIn>
+              <span className="text-[11px] font-medium tracking-[2px] uppercase text-[var(--label-gold)] block mb-3.5">
+                How it works
+              </span>
+            </FadeIn>
+            <FadeIn>
+              <h2 className="text-[28px] md:text-[32px] font-medium tracking-tight text-[var(--dark)] mb-4 leading-[1.15]">
+                From requirement to reporting.
+              </h2>
+              <p className="text-[var(--muted)] text-[13px] leading-relaxed max-w-[300px] text-justify">
+                Getting started is simple. You share your requirements, we handle everything from there: planning, vehicles, drivers, monitoring and reporting. No back-and-forth with multiple vendors. One team, one process, complete visibility.
+              </p>
+            </FadeIn>
+          </div>
+
+          {/* Right: numbered list */}
+          <div className="flex flex-col">
             {steps.map((s, i) => (
-              <div key={i} className="flex items-center gap-1.5 flex-1 min-w-[100px]">
+              <FadeIn key={i} delay={i * 0.08}>
                 <div
-                  className={`rounded-2xl p-5 text-center flex-1
-                    hover:-translate-y-1 transition-transform duration-300
-                    ${i === steps.length - 1
-                      ? "bg-[var(--dark)]"
-                      : "bg-white border border-[var(--border)]"
-                    }`}
+                  className={`py-5 flex gap-5 items-center ${
+                    i < steps.length - 1 ? "border-b border-[var(--border)]" : ""
+                  }`}
                 >
-                  <div className="text-[var(--gold)] text-[22px] font-medium mb-1.5">{s.n}</div>
-                  <div
-                    className={`text-[13px] font-medium ${i === steps.length - 1 ? "text-white" : "text-[var(--dark)]"}`}
-                  >
-                    {s.label}
+                  <span className="text-[var(--gold)] text-[28px] font-extrabold flex-none w-[40px]">
+                    {s.n}
+                  </span>
+                  <div>
+                    <div className="text-[var(--dark)] text-[15px] font-semibold mb-0.5">{s.title}</div>
+                    <div className="text-[var(--muted-light)] text-[12px]">{s.desc}</div>
                   </div>
                 </div>
-                {i < steps.length - 1 && (
-                  <span className="text-[var(--border)] text-[16px] flex-none hidden sm:block">→</span>
-                )}
-              </div>
+              </FadeIn>
             ))}
           </div>
-        </FadeIn>
+
+        </div>
       </div>
     </section>
   );

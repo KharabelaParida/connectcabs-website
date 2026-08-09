@@ -7,8 +7,8 @@ import Link from "next/link";
 const links = [
   { label: "Solutions", href: "#solutions" },
   { label: "Services", href: "#services" },
-  { label: "Industries", href: "#industries" },
   { label: "Technology", href: "#technology" },
+  { label: "Industries", href: "#industries" },  
   { label: "Fleet", href: "#fleet" },
   { label: "About", href: "#about" },
 ];
@@ -59,7 +59,7 @@ export default function Navbar() {
         <div className="hidden md:flex items-center gap-4">
           
           <Link
-            href="#contact"
+            href="https://wa.me/918277840505?text=Hi%20Connect%20Cabs%2C%20I%20would%20like%20to%20know%20more%20about%20your%20services." target="_blank"
             className="bg-[var(--dark)] text-white text-[13px] font-medium
               px-6 py-2.5 rounded-lg hover:scale-[1.03] transition-transform"
           >
@@ -105,7 +105,7 @@ export default function Navbar() {
               </Link>
             ))}
             <Link
-              href="#contact"
+              href="https://wa.me/918277840505?text=Hi%20Connect%20Cabs%2C%20I%20would%20like%20to%20know%20more%20about%20your%20services." target="_blank"
               onClick={() => setMobileOpen(false)}
               className="bg-[var(--dark)] text-white text-sm font-medium py-3 rounded-xl text-center mt-1"
             >

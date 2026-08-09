@@ -55,7 +55,7 @@ export default function Hero() {
             </p>
             <div className="flex gap-3.5 flex-wrap items-center">
               <Link
-                href="#contact"
+                href="https://wa.me/918277840505?text=Hi%20Connect%20Cabs%2C%20I%20would%20like%20to%20know%20more%20about%20your%20services." target="_blank"
                 className="bg-[var(--dark)] text-white text-[15px] font-medium px-7 py-4
                   rounded-xl hover:-translate-y-0.5 hover:shadow-[0_8px_24px_rgba(11,31,58,0.18)]
                   transition-all duration-200"
@@ -63,9 +63,9 @@ export default function Hero() {
                 Request a quote
               </Link>
               <Link
-                href="#contact"
-                className="text-[var(--dark)] text-[15px] font-medium px-2 py-4 transition-colors
-                  hover:text-[var(--navy)]"
+                href="https://wa.me/918277840505?text=Hi%20Connect%20Cabs%2C%20I%20would%20like%20to%20know%20more%20about%20your%20services." target="_blank"
+                className="text-[var(--dark)] text-[15px] font-medium px-2 py-4 transition-all duration-200
+  hover:text-[var(--gold)] hover:translate-x-1"
               >
                 Talk to our team →
               </Link>

@@ -18,11 +18,7 @@ export default function Home() {
     <>
       <Navbar />
       <Hero />
-      <TransitionQuote
-        line1="Your people move."
-        line2="Your business moves"
-        highlight="with them."
-      />
+      <TransitionQuote/>
       <ProblemSection />
       <SolutionsBento />
       <TechnologySection />

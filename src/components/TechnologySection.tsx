@@ -3,12 +3,12 @@
 import FadeIn from "./FadeIn";
 
 const features = [
-  "GPS-enabled fleet tracking",
-  "Digital booking & dispatch",
-  "Real-time trip monitoring",
-  "Automated confirmations",
-  "Corporate account management",
-  "MIS reporting & analytics",
+  { title: "Real-Time Fleet Visibility", desc: "GPS-enabled tracking and live movement visibility across the network." },
+  { title: "Digital Booking & Dispatch", desc: "Streamlined booking, allocation, and dispatch through one connected platform." },
+  { title: "Live Trip Monitoring", desc: "Real-time oversight of journeys, schedules, and service performance." },
+  { title: "Automated Communication", desc: "Instant confirmations, updates, alerts, and notifications across every journey." },
+  { title: "Account & Mobility Management", desc: "Centralized management for individual, family, business, and corporate mobility needs." },
+  { title: "Data, MIS & Analytics", desc: "Actionable insights, performance dashboards, and consolidated reporting for better decisions." },
 ];
 
 export default function TechnologySection() {
@@ -22,22 +22,25 @@ export default function TechnologySection() {
           >
             {/* Left: headline + features */}
             <div>
-              <span className="text-[var(--gold)] text-[11px] font-medium tracking-[2px] uppercase block mb-3.5">
+              <span className="text-[var(--gold)] text-[15px] font-bold tracking-[2px] uppercase block mb-3.5">
                 Technology
               </span>
               <h2 className="text-white text-[24px] sm:text-[28px] md:text-[32px] lg:text-[36px] font-medium tracking-tight mb-8 leading-[1.15]">
-                Transportation managed with technology.
+                One Connected Layer for Every Mobility Journey.
               </h2>
               <div className="flex flex-col">
                 {features.map((f, i) => (
                   <div
                     key={i}
-                    className={`py-3.5 flex gap-3 items-center ${
+                    className={`py-3.5 flex gap-3 items-start ${
                       i < features.length - 1 ? "border-b border-white/[0.08]" : ""
                     }`}
                   >
-                    <div className="w-1.5 h-1.5 rounded-full bg-[var(--gold)] flex-none" />
-                    <span className="text-[#B8C6DC] text-[13px]">{f}</span>
+                    <div className="w-1.5 h-1.5 rounded-full bg-[var(--gold)] flex-none mt-2" />
+                    <div>
+                      <div className="text-white text-[14px] font-semibold mb-0.5">{f.title}</div>
+                      <div className="text-[#B8C6DC] text-[12px]">{f.desc}</div>
+                    </div>
                   </div>
                 ))}
               </div>
@@ -48,7 +51,6 @@ export default function TechnologySection() {
               className="bg-white rounded-2xl p-4 sm:p-5 md:p-6"
               style={{ boxShadow: "0 24px 64px rgba(0,0,0,0.25)" }}
             >
-              {/* Header */}
               <div className="flex justify-between items-center mb-3 sm:mb-4 pb-2.5 sm:pb-3 border-b border-[var(--off-white)]">
                 <span className="text-[var(--dark)] text-[12px] sm:text-[13px] font-semibold">Connect Cabs Platform</span>
                 <div className="bg-[var(--light-blue)] rounded-md px-2.5 py-1 text-[9px] sm:text-[10px] text-[var(--navy)] font-medium">
@@ -56,7 +58,6 @@ export default function TechnologySection() {
                 </div>
               </div>
 
-              {/* Stats row — 2 cols on mobile, 3 on sm+ */}
               <div className="grid grid-cols-2 sm:grid-cols-3 gap-1.5 sm:gap-2.5 mb-1.5 sm:mb-2.5">
                 <div className="bg-[var(--off-white)] rounded-lg sm:rounded-xl p-2.5 sm:p-3">
                   <div className="text-[var(--muted-light)] text-[9px] sm:text-[10px]">Fleet</div>
@@ -68,7 +69,6 @@ export default function TechnologySection() {
                   <div className="text-[var(--dark)] text-[14px] sm:text-[16px] font-bold">In progress</div>
                   <div className="text-[var(--muted-light)] text-[8px] sm:text-[10px]">being monitored</div>
                 </div>
-                {/* Alerts — full width on mobile, normal on sm+ */}
                 <div className="bg-[var(--light-gold)] rounded-lg sm:rounded-xl p-2.5 sm:p-3 col-span-2 sm:col-span-1">
                   <div className="text-[#8A5B00] text-[9px] sm:text-[10px]">Alerts</div>
                   <div className="text-[var(--dark)] text-[14px] sm:text-[16px] font-bold">Route deviation</div>
@@ -76,7 +76,6 @@ export default function TechnologySection() {
                 </div>
               </div>
 
-              {/* Trip detail */}
               <div className="bg-[var(--off-white)] rounded-lg sm:rounded-xl p-2.5 sm:p-3 mb-1.5 sm:mb-2.5">
                 <div className="flex justify-between items-center">
                   <div>
@@ -92,7 +91,6 @@ export default function TechnologySection() {
                 </div>
               </div>
 
-              {/* Bottom row */}
               <div className="grid grid-cols-2 gap-1.5 sm:gap-2">
                 <div className="bg-[var(--off-white)] rounded-lg sm:rounded-xl p-2.5 sm:p-3">
                   <div className="text-[var(--muted-light)] text-[9px] sm:text-[10px]">Driver</div>
@@ -105,7 +103,6 @@ export default function TechnologySection() {
               </div>
             </div>
 
-            {/* Decorative */}
             <svg className="absolute -top-8 -right-8 opacity-5 pointer-events-none" width="200" height="200">
               <circle cx="100" cy="100" r="90" fill="none" stroke="#fff" strokeWidth="1" />
               <circle cx="100" cy="100" r="55" fill="none" stroke="#fff" strokeWidth="1" />

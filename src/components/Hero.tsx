@@ -26,8 +26,8 @@ export default function Hero() {
           <circle cx="315" cy="315" r="3.5" fill="#FFB000" />
         </svg>
         <FadeIn>
-          <span className="text-[11px] font-medium tracking-[2px] uppercase text-[var(--label-gold)] block mb-5">
-            Enterprise mobility
+          <span className="text-[15px] font-bold tracking-[2px] uppercase text-[var(--label-gold)] block mb-5">
+            Mobility for Every Journey
           </span>
         </FadeIn>
 
@@ -35,23 +35,10 @@ export default function Hero() {
           {/* Left: copy */}
           <FadeIn>
             <h1 className="text-[42px] md:text-[56px] lg:text-[64px] font-medium leading-[1.05] tracking-tight text-[var(--dark)] mb-6">
-              Move your<br />business.<br />
-              <span className="relative inline-block">
-                Not just
-                <span
-                  className="absolute left-[-4px] right-[-4px] bottom-1 h-[18px] rounded-sm"
-                  style={{
-                    background: "linear-gradient(90deg, var(--gold), var(--bright-gold))",
-                    opacity: 0.35,
-                    zIndex: 0,
-                  }}
-                />
-              </span>{" "}
-              your people.
+              Moving People, Business &<br />Life Forward.<br />
             </h1>
             <p className="text-[var(--muted)] text-[17px] leading-relaxed mb-9 max-w-[420px]">
-              Employee transport, executive mobility and managed fleets — connected
-              through one accountable partner.
+              Connecting people, businesses, and mobility partners through one intelligent, tech-enabled ecosystem.
             </p>
             <div className="flex gap-3.5 flex-wrap items-center">
               <Link

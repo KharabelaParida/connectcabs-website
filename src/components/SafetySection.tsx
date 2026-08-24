@@ -64,7 +64,7 @@ export default function SafetySection() {
               <h2 className="text-[28px] md:text-[32px] font-medium tracking-tight text-[var(--dark)] mb-4 leading-[1.15]">
                 Safety Is Our Foundation.
               </h2>
-              <p className="text-[var(--muted)] text-[13px] leading-relaxed max-w-[300px] text-justify">
+              <p className="text-[var(--muted)] text-[13px] leading-relaxed max-w-[370px] text-justify">
                 Every journey carries a responsibility. We&apos;re committed to providing safe, reliable and accountable mobility through rigorous processes, trained teams and real-time visibility.
               </p>
             </FadeIn>

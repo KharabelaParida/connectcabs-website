@@ -7,7 +7,7 @@ export default function MobilityNetwork() {
     <section className="py-20">
       <div className="max-w-[1200px] mx-auto px-6">
         <FadeIn>
-          <span className="text-[11px] font-medium tracking-[2px] uppercase text-[var(--label-gold)] block mb-3.5">
+          <span className="text-[11px] font-medium tracking-[2px] uppercase text-[var(--gold)] block mb-3.5">
             Mobility network
           </span>
         </FadeIn>

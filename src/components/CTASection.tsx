@@ -13,11 +13,11 @@ export default function CTASection() {
             style={{ background: "linear-gradient(160deg, var(--dark), var(--deep-navy))" }}
           >
             <h2 className="text-white text-[32px] md:text-[38px] lg:text-[42px] font-medium leading-[1.12] tracking-tight mb-4">
-              Let&apos;s move your<br />business <span className="text-[var(--gold)]">forward.</span>
+              Let&apos;s Move Forward, <span className="text-[var(--gold)]">Together.</span>
             </h2>
             <p className="text-[var(--soft-navy)] text-[15px] mx-auto mb-8 max-w-[420px] leading-relaxed">
-              Tell us what your organization needs. We&apos;ll design a mobility solution
-              around your people and routes.
+              Please share your mobility needs. We&apos;ll design a mobility solution
+              around your people and planet.
             </p>
             <div className="flex gap-3.5 justify-center flex-wrap">
               <Link

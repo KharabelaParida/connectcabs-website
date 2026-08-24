@@ -4,43 +4,43 @@ import FadeIn from "./FadeIn";
 
 const features = [
   {
-    title: "Verified Drivers",
-    desc: "Background checked, trained, ID verified",
+    title: "Verified Chauffeur",
+    desc: "Background-checked, trained & ID-verified",
     iconBg: "rgba(34,197,94,0.1)",
     iconColor: "#22C55E",
     icon: <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />,
   },
   {
-    title: "Preventive maintenance",
-    desc: "Scheduled vehicle checks & servicing",
+    title: "Preventive Maintenance",
+    desc: "Regular inspections & scheduled servicing",
     iconBg: "rgba(14,165,233,0.1)",
     iconColor: "#0EA5E9",
     icon: <><circle cx="12" cy="12" r="10" /><path d="M12 6v6l4 2" /></>,
   },
   {
-    title: "GPS-enabled tracking",
-    desc: "Real-time vehicle location visibility",
+    title: "GPS-Enabled Tracking",
+    desc: "Real-time trip & vehicle visibility",
     iconBg: "rgba(255,176,0,0.12)",
     iconColor: "#FFB000",
     icon: <><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z" /><circle cx="12" cy="10" r="3" /></>,
   },
   {
     title: "Safety SOPs",
-    desc: "Standardised operating procedures",
+    desc: "Standardised safety & operating procedures",
     iconBg: "rgba(99,102,241,0.1)",
     iconColor: "#6366F1",
     icon: <><path d="M2 3h6a4 4 0 014 4v14a3 3 0 00-3-3H2z" /><path d="M22 3h-6a4 4 0 00-4 4v14a3 3 0 013-3h7z" /></>,
   },
   {
-    title: "Trip monitoring",
-    desc: "Live route tracking & alerts",
+    title: "Trip Monitoring",
+    desc: "Live tracking, alerts & proactive support",
     iconBg: "rgba(236,72,153,0.1)",
     iconColor: "#EC4899",
     icon: <path d="M22 12h-4l-3 9L9 3l-3 9H2" />,
   },
   {
-    title: "Quality audits",
-    desc: "Regular compliance & quality checks",
+    title: "Quality Audits",
+    desc: "Regular compliance & service quality checks",
     iconBg: "rgba(34,197,94,0.1)",
     iconColor: "#22C55E",
     icon: <><path d="M22 11.08V12a10 10 0 11-5.93-9.14" /><path d="M22 4L12 14.01l-3-3" /></>,
@@ -56,16 +56,16 @@ export default function SafetySection() {
           {/* Left: headline */}
           <div>
             <FadeIn>
-              <span className="text-[11px] font-medium tracking-[2px] uppercase text-[var(--label-gold)] block mb-3.5">
+              <span className="text-[15px] font-bold tracking-[2px] uppercase text-[var(--gold)] block mb-3.5">
                 Safety
               </span>
             </FadeIn>
             <FadeIn>
               <h2 className="text-[28px] md:text-[32px] font-medium tracking-tight text-[var(--dark)] mb-4 leading-[1.15]">
-                Safety isn&apos;t a feature.<br />It&apos;s the foundation.
+                Safety Is Our Foundation.
               </h2>
               <p className="text-[var(--muted)] text-[13px] leading-relaxed max-w-[300px] text-justify">
-                Your employees trust you to get them home safe. We take that seriously. Every driver is background verified. Every vehicle is inspected before it leaves. Every trip is tracked in real time. No shortcuts.
+                Every journey carries a responsibility. We&apos;re committed to providing safe, reliable and accountable mobility through rigorous processes, trained teams and real-time visibility.
               </p>
             </FadeIn>
           </div>

@@ -26,7 +26,7 @@ export default function Hero() {
           <circle cx="315" cy="315" r="3.5" fill="#FFB000" />
         </svg>
         <FadeIn>
-          <span className="text-[15px] font-bold tracking-[2px] uppercase text-[var(--label-gold)] block mb-5">
+          <span className="text-[15px] font-bold tracking-[2px] uppercase text-[var(--gold)] block mb-5">
             Mobility for Every Journey
           </span>
         </FadeIn>

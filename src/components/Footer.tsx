@@ -64,7 +64,7 @@ export default function Footer() {
             <div className="flex flex-col gap-3.5">
               <span className="text-[13px] text-[var(--muted)]">hello@connectcabsindia.com</span>
               <span className="text-[13px] text-[var(--muted)]">+91-8277840505</span>
-              <span className="text-[13px] text-[var(--muted)]">Bhubaneswar, Odisha</span>
+              <span className="text-[13px] text-[var(--muted)]">Bhubaneswar, Odisha, India</span>
             </div>
           </div>
 

@@ -8,7 +8,7 @@ export default function SolutionsBento() {
       <div className="max-w-[1200px] mx-auto px-6">
         <div className="text-center max-w-[700px] mx-auto mb-9">
           <FadeIn>
-            <span className="text-[15px] font-bold tracking-[2px] uppercase text-[var(--label-gold)] block mb-3.5">
+            <span className="text-[15px] font-bold tracking-[2px] uppercase text-[var(--gold)] block mb-3.5">
               Solutions
             </span>
           </FadeIn>

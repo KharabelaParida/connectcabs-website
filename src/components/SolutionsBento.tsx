@@ -42,7 +42,7 @@ export default function SolutionsBento() {
               <span className="text-[var(--dark-gold)] text-[28px] font-extrabold">02</span>
               <div>
                 <div className="text-[var(--dark)] text-[16px] font-semibold mb-1">Executive & Premium Mobility</div>
-                <div className="text-[var(--dark-gold)] text-[12px]">Personalized, premium journeys for executives and VIPs.</div>
+                <div className="text-[var(--dark-gold)] text-[12px]">Personalized, premium journeys for executives, leadership  and VIPs.</div>
               </div>
             </div>
           </FadeIn>
@@ -81,8 +81,8 @@ export default function SolutionsBento() {
             >
               <span className="text-[var(--gold)] text-[28px] font-extrabold">05</span>
               <div>
-                <div className="text-[var(--dark)] text-[15px] font-semibold mb-1">Fleet & Driver Management</div>
-                <div className="text-[var(--muted-light)] text-[12px]">Verified drivers, real-time visibility.</div>
+                <div className="text-[var(--dark)] text-[15px] font-semibold mb-1">Fleet & Chauffeur Management</div>
+                <div className="text-[var(--muted-light)] text-[12px]">Verified chauffeurs, real-time visibility.</div>
               </div>
             </div>
           </FadeIn>

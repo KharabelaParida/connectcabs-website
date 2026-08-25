@@ -1,113 +1,167 @@
 "use client";
 
+import { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 
+const contactBlock = (
+  <div className="border border-[var(--border)] rounded-2xl p-5">
+    <div className="flex items-center gap-2 mb-2.5">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#64748B" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect x="2" y="4" width="20" height="16" rx="2" /><path d="m22 7-10 5L2 7" /></svg>
+      <span className="text-[13px] text-[var(--muted)]">hello@connectcabsindia.com</span>
+    </div>
+    <div className="flex items-center gap-2 mb-4">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#64748B" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z" /></svg>
+      <span className="text-[13px] text-[var(--muted)]">+91-8277840505</span>
+    </div>
+
+    <div className="flex items-start gap-2 mb-3 md:whitespace-nowrap">
+      <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="var(--gold)" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="shrink-0 mt-0.5 md:mt-0">
+        <path d="M3 21h18" /><path d="M5 21V7l8-4v18" /><path d="M19 21V11l-6-4" />
+        <path d="M9 9v.01" /><path d="M9 12v.01" /><path d="M9 15v.01" /><path d="M9 18v.01" />
+      </svg>
+      <span className="text-[13px] text-[var(--muted)]">
+        <span className="text-[var(--dark)] font-medium">HQ —</span> Bhubaneswar, Odisha
+      </span>
+    </div>
+    <div className="flex items-start gap-2 mb-3 md:whitespace-nowrap">
+      <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#94A3B8" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="shrink-0 mt-0.5 md:mt-0">
+        <rect x="4" y="2" width="16" height="20" rx="1" /><path d="M9 22v-4h6v4" />
+        <path d="M8 6h.01" /><path d="M16 6h.01" /><path d="M8 10h.01" /><path d="M16 10h.01" /><path d="M8 14h.01" /><path d="M16 14h.01" />
+      </svg>
+      <span className="text-[13px] text-[var(--muted)]">
+        <span className="text-[var(--dark)] font-medium">Branch —</span> Bangalore, Karnataka
+      </span>
+    </div>
+    <div className="flex items-start gap-2 md:whitespace-nowrap">
+      <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#94A3B8" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="shrink-0 mt-0.5 md:mt-0">
+        <rect x="4" y="2" width="16" height="20" rx="1" /><path d="M9 22v-4h6v4" />
+        <path d="M8 6h.01" /><path d="M16 6h.01" /><path d="M8 10h.01" /><path d="M16 10h.01" /><path d="M8 14h.01" /><path d="M16 14h.01" />
+      </svg>
+      <span className="text-[13px] text-[var(--muted)]">
+        <span className="text-[var(--dark)] font-medium">Branch —</span> Guwahati, Assam
+      </span>
+    </div>
+  </div>
+);
+
+const solutionsLinks = (
+  <div className="flex flex-col gap-3.5">
+    <Link href="#" className="text-[13px] text-[var(--muted)] hover:text-[var(--dark)] transition-colors">Employee Transport</Link>
+    <Link href="#" className="text-[13px] text-[var(--muted)] hover:text-[var(--dark)] transition-colors">Executive Mobility</Link>
+    <Link href="#" className="text-[13px] text-[var(--muted)] hover:text-[var(--dark)] transition-colors">Airport Transfers</Link>
+    <Link href="#" className="text-[13px] text-[var(--muted)] hover:text-[var(--dark)] transition-colors">Managed Fleet</Link>
+    <Link href="#" className="text-[13px] text-[var(--muted)] hover:text-[var(--dark)] transition-colors">Corporate Events</Link>
+    <Link href="#" className="text-[13px] text-[var(--muted)] hover:text-[var(--dark)] transition-colors">Business Travel</Link>
+  </div>
+);
+
+const industriesLinks = (
+  <div className="flex flex-col gap-3.5">
+    <Link href="#" className="text-[13px] text-[var(--muted)] hover:text-[var(--dark)] transition-colors">Manufacturing</Link>
+    <Link href="#" className="text-[13px] text-[var(--muted)] hover:text-[var(--dark)] transition-colors">Mining</Link>
+    <Link href="#" className="text-[13px] text-[var(--muted)] hover:text-[var(--dark)] transition-colors">IT & Technology</Link>
+    <Link href="#" className="text-[13px] text-[var(--muted)] hover:text-[var(--dark)] transition-colors">Government</Link>
+    <Link href="#" className="text-[13px] text-[var(--muted)] hover:text-[var(--dark)] transition-colors">Healthcare</Link>
+    <Link href="#" className="text-[13px] text-[var(--muted)] hover:text-[var(--dark)] transition-colors">SMEs & Startups</Link>
+  </div>
+);
+
+const companyLinks = (
+  <div className="flex flex-col gap-3.5">
+    <Link href="/about" className="text-[13px] text-[var(--muted)] hover:text-[var(--dark)] transition-colors">About</Link>
+    <Link href="#technology" className="text-[13px] text-[var(--muted)] hover:text-[var(--dark)] transition-colors">Technology</Link>
+    <Link href="#" className="text-[13px] text-[var(--muted)] hover:text-[var(--dark)] transition-colors">Safety</Link>
+    <Link href="#fleet" className="text-[13px] text-[var(--muted)] hover:text-[var(--dark)] transition-colors">Fleet</Link>
+    <Link href="https://wa.me/918277840505?text=Hi%20ConnectCabs%2C%20I%20would%20like%20to%20know%20more%20about%20your%20services." target="_blank" className="text-[13px] text-[var(--muted)] hover:text-[var(--dark)] transition-colors">Contact</Link>
+  </div>
+);
+
+const legalLinks = (
+  <div className="flex flex-col gap-3.5">
+    <Link href="#" className="text-[13px] text-[var(--muted)] hover:text-[var(--dark)] transition-colors">Privacy Policy</Link>
+    <Link href="#" className="text-[13px] text-[var(--muted)] hover:text-[var(--dark)] transition-colors">Terms of Use</Link>
+  </div>
+);
+
+const accordionSections = [
+  { id: "contact", title: "Contact", content: contactBlock },
+  { id: "solutions", title: "Solutions", content: solutionsLinks },
+  { id: "industries", title: "Industries", content: industriesLinks },
+  { id: "company", title: "Company", content: companyLinks },
+  { id: "legal", title: "Legal", content: legalLinks },
+];
+
 export default function Footer() {
+  const [openSection, setOpenSection] = useState<string | null>(null);
+
+  const toggle = (id: string) => {
+    setOpenSection((prev) => (prev === id ? null : id));
+  };
+
   return (
     <footer className="border-t border-[var(--border)] pt-16 pb-6">
       <div className="max-w-[1100px] mx-auto px-6">
 
-        {/* ───── Footer Columns ───── */}
-        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-[1.4fr_1fr_1fr_1fr_1fr] gap-10 mb-16">
-
-          {/* Column 1: Contact — moved to left, card with icons */}
+        {/* ───── Desktop: 5-column grid, unchanged ───── */}
+        <div className="hidden md:grid grid-cols-[1.4fr_1fr_1fr_1fr_1fr] gap-10 mb-16">
           <div>
             <div className="text-[15px] font-semibold text-[var(--dark)] mb-5">Contact</div>
-            <div className="border border-[var(--border)] rounded-2xl p-5">
-              <div className="flex items-center gap-2 mb-2.5">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#64748B" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect x="2" y="4" width="20" height="16" rx="2" /><path d="m22 7-10 5L2 7" /></svg>
-                <span className="text-[13px] text-[var(--muted)]">hello@connectcabsindia.com</span>
-              </div>
-              <div className="flex items-center gap-2 mb-4">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#64748B" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z" /></svg>
-                <span className="text-[13px] text-[var(--muted)]">+91-8277840505</span>
-              </div>
-
-              <div className="flex items-center gap-2 mb-3 whitespace-nowrap">
-                <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="var(--gold)" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="shrink-0">
-                  <path d="M3 21h18" /><path d="M5 21V7l8-4v18" /><path d="M19 21V11l-6-4" />
-                  <path d="M9 9v.01" /><path d="M9 12v.01" /><path d="M9 15v.01" /><path d="M9 18v.01" />
-                </svg>
-                <span className="text-[13px] text-[var(--muted)]">
-                  <span className="text-[var(--dark)] font-medium">HQ —</span> Bhubaneswar, Odisha
-                </span>
-              </div>
-              <div className="flex items-center gap-2 mb-3 whitespace-nowrap">
-                <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#94A3B8" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="shrink-0">
-                  <rect x="4" y="2" width="16" height="20" rx="1" /><path d="M9 22v-4h6v4" />
-                  <path d="M8 6h.01" /><path d="M16 6h.01" /><path d="M8 10h.01" /><path d="M16 10h.01" /><path d="M8 14h.01" /><path d="M16 14h.01" />
-                </svg>
-                <span className="text-[13px] text-[var(--muted)]">
-                  <span className="text-[var(--dark)] font-medium">Branch —</span> Bangalore, Karnataka
-                </span>
-              </div>
-              <div className="flex items-center gap-2 whitespace-nowrap">
-                <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#94A3B8" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="shrink-0">
-                  <rect x="4" y="2" width="16" height="20" rx="1" /><path d="M9 22v-4h6v4" />
-                  <path d="M8 6h.01" /><path d="M16 6h.01" /><path d="M8 10h.01" /><path d="M16 10h.01" /><path d="M8 14h.01" /><path d="M16 14h.01" />
-                </svg>
-                <span className="text-[13px] text-[var(--muted)]">
-                  <span className="text-[var(--dark)] font-medium">Branch —</span> Guwahati, Assam
-                </span>
-              </div>
-            </div>
+            {contactBlock}
           </div>
-
-          {/* Column 2: Solutions */}
           <div>
             <div className="text-[15px] font-semibold text-[var(--dark)] mb-5">Solutions</div>
-            <div className="flex flex-col gap-3.5">
-              <Link href="#" className="text-[13px] text-[var(--muted)] hover:text-[var(--dark)] transition-colors">Employee Transport</Link>
-              <Link href="#" className="text-[13px] text-[var(--muted)] hover:text-[var(--dark)] transition-colors">Executive Mobility</Link>
-              <Link href="#" className="text-[13px] text-[var(--muted)] hover:text-[var(--dark)] transition-colors">Airport Transfers</Link>
-              <Link href="#" className="text-[13px] text-[var(--muted)] hover:text-[var(--dark)] transition-colors">Managed Fleet</Link>
-              <Link href="#" className="text-[13px] text-[var(--muted)] hover:text-[var(--dark)] transition-colors">Corporate Events</Link>
-              <Link href="#" className="text-[13px] text-[var(--muted)] hover:text-[var(--dark)] transition-colors">Business Travel</Link>
-            </div>
+            {solutionsLinks}
           </div>
-
-          {/* Column 3: Industries */}
           <div>
             <div className="text-[15px] font-semibold text-[var(--dark)] mb-5">Industries</div>
-            <div className="flex flex-col gap-3.5">
-              <Link href="#" className="text-[13px] text-[var(--muted)] hover:text-[var(--dark)] transition-colors">Manufacturing</Link>
-              <Link href="#" className="text-[13px] text-[var(--muted)] hover:text-[var(--dark)] transition-colors">Mining</Link>
-              <Link href="#" className="text-[13px] text-[var(--muted)] hover:text-[var(--dark)] transition-colors">IT & Technology</Link>
-              <Link href="#" className="text-[13px] text-[var(--muted)] hover:text-[var(--dark)] transition-colors">Government</Link>
-              <Link href="#" className="text-[13px] text-[var(--muted)] hover:text-[var(--dark)] transition-colors">Healthcare</Link>
-              <Link href="#" className="text-[13px] text-[var(--muted)] hover:text-[var(--dark)] transition-colors">SMEs & Startups</Link>
-            </div>
+            {industriesLinks}
           </div>
-
-          {/* Column 4: Company */}
           <div>
             <div className="text-[15px] font-semibold text-[var(--dark)] mb-5">Company</div>
-            <div className="flex flex-col gap-3.5">
-              <Link href="/about" className="text-[13px] text-[var(--muted)] hover:text-[var(--dark)] transition-colors">About</Link>
-              <Link href="#technology" className="text-[13px] text-[var(--muted)] hover:text-[var(--dark)] transition-colors">Technology</Link>
-              <Link href="#" className="text-[13px] text-[var(--muted)] hover:text-[var(--dark)] transition-colors">Safety</Link>
-              <Link href="#fleet" className="text-[13px] text-[var(--muted)] hover:text-[var(--dark)] transition-colors">Fleet</Link>
-              <Link href="https://wa.me/918277840505?text=Hi%20ConnectCabs%2C%20I%20would%20like%20to%20know%20more%20about%20your%20services." target="_blank" className="text-[13px] text-[var(--muted)] hover:text-[var(--dark)] transition-colors">Contact</Link>
-            </div>
+            {companyLinks}
           </div>
-
-          {/* Column 5: Legal */}
           <div>
             <div className="text-[15px] font-semibold text-[var(--dark)] mb-5">Legal</div>
-            <div className="flex flex-col gap-3.5">
-              <Link href="#" className="text-[13px] text-[var(--muted)] hover:text-[var(--dark)] transition-colors">Privacy Policy</Link>
-              <Link href="#" className="text-[13px] text-[var(--muted)] hover:text-[var(--dark)] transition-colors">Terms of Use</Link>
-            </div>
+            {legalLinks}
           </div>
+        </div>
 
+        {/* ───── Mobile: tap-to-expand accordion ───── */}
+        <div className="md:hidden mb-10">
+          {accordionSections.map((section) => {
+            const isOpen = openSection === section.id;
+            return (
+              <div key={section.id} className="border-b border-[var(--border)]">
+                <button
+                  onClick={() => toggle(section.id)}
+                  className="w-full flex items-center justify-between py-4 text-left"
+                  aria-expanded={isOpen}
+                >
+                  <span className="text-[15px] font-semibold text-[var(--dark)]">{section.title}</span>
+                  <svg
+                    width="18"
+                    height="18"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="#64748B"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    className={`transition-transform duration-200 ${isOpen ? "rotate-180" : ""}`}
+                  >
+                    <path d="m6 9 6 6 6-6" />
+                  </svg>
+                </button>
+                {isOpen && <div className="pb-5">{section.content}</div>}
+              </div>
+            );
+          })}
         </div>
 
         {/* ───── Bottom Bar ───── */}
         <div className="border-t border-[var(--off-white)] pt-5 flex flex-col sm:flex-row items-center justify-between gap-4">
 
-          {/* Logo icon — scrolls to top on click */}
-          
           <a  href="/"
             onClick={(e) => { e.preventDefault(); window.scrollTo({ top: 0, behavior: "smooth" }); }}
             className="cursor-pointer"
@@ -115,15 +169,12 @@ export default function Footer() {
             <Image src="/logo-icon.png" alt="ConnectCabs" width={100} height={100} className="h-8 w-auto" />
           </a>
 
-          {/* Copyright */}
           <span className="text-[12px] text-[var(--muted-light)]">
             © {new Date().getFullYear()} ConnectCabs Private Limited. All rights reserved.
           </span>
 
-          {/* Social Icons */}
           <div className="flex gap-3">
 
-            {/* LinkedIn */}
             <a href="#" target="_blank" className="w-8 h-8 rounded-lg bg-[var(--off-white)] flex items-center justify-center hover:bg-[var(--border)] transition-colors">
               <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#64748B" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                 <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
@@ -132,7 +183,6 @@ export default function Footer() {
               </svg>
             </a>
 
-            {/* X (Twitter) */}
             <a href="#" target="_blank" className="w-8 h-8 rounded-lg bg-[var(--off-white)] flex items-center justify-center hover:bg-[var(--border)] transition-colors">
               <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#64748B" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                 <path d="M4 4l11.733 16h4.267l-11.733 -16z" />
@@ -140,7 +190,6 @@ export default function Footer() {
               </svg>
             </a>
 
-            {/* Instagram */}
             <a href="#" target="_blank" className="w-8 h-8 rounded-lg bg-[var(--off-white)] flex items-center justify-center hover:bg-[var(--border)] transition-colors">
               <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#64748B" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                 <rect x="2" y="2" width="20" height="20" rx="5" />
@@ -149,8 +198,6 @@ export default function Footer() {
               </svg>
             </a>
 
-            {/* WhatsApp */}
-            
             <a   href="https://wa.me/918277840505?text=Hi%20ConnectCabs%2C%20I%20would%20like%20to%20know%20more%20about%20your%20services."
               target="_blank"
               className="w-8 h-8 rounded-lg bg-[var(--off-white)] flex items-center justify-center hover:bg-[var(--border)] transition-colors"

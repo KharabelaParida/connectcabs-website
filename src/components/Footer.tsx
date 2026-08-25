@@ -9,9 +9,52 @@ export default function Footer() {
       <div className="max-w-[1100px] mx-auto px-6">
 
         {/* ───── Footer Columns ───── */}
-        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-10 mb-16">
+        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-[1.4fr_1fr_1fr_1fr_1fr] gap-10 mb-16">
 
-          {/* Column 1: Solutions */}
+          {/* Column 1: Contact — moved to left, card with icons */}
+          <div>
+            <div className="text-[15px] font-semibold text-[var(--dark)] mb-5">Contact</div>
+            <div className="border border-[var(--border)] rounded-2xl p-5">
+              <div className="flex items-center gap-2 mb-2.5">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#64748B" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect x="2" y="4" width="20" height="16" rx="2" /><path d="m22 7-10 5L2 7" /></svg>
+                <span className="text-[13px] text-[var(--muted)]">hello@connectcabsindia.com</span>
+              </div>
+              <div className="flex items-center gap-2 mb-4">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#64748B" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z" /></svg>
+                <span className="text-[13px] text-[var(--muted)]">+91-8277840505</span>
+              </div>
+
+              <div className="flex items-center gap-2 mb-3 whitespace-nowrap">
+                <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="var(--gold)" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="shrink-0">
+                  <path d="M3 21h18" /><path d="M5 21V7l8-4v18" /><path d="M19 21V11l-6-4" />
+                  <path d="M9 9v.01" /><path d="M9 12v.01" /><path d="M9 15v.01" /><path d="M9 18v.01" />
+                </svg>
+                <span className="text-[13px] text-[var(--muted)]">
+                  <span className="text-[var(--dark)] font-medium">HQ —</span> Bhubaneswar, Odisha
+                </span>
+              </div>
+              <div className="flex items-center gap-2 mb-3 whitespace-nowrap">
+                <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#94A3B8" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="shrink-0">
+                  <rect x="4" y="2" width="16" height="20" rx="1" /><path d="M9 22v-4h6v4" />
+                  <path d="M8 6h.01" /><path d="M16 6h.01" /><path d="M8 10h.01" /><path d="M16 10h.01" /><path d="M8 14h.01" /><path d="M16 14h.01" />
+                </svg>
+                <span className="text-[13px] text-[var(--muted)]">
+                  <span className="text-[var(--dark)] font-medium">Branch —</span> Bangalore, Karnataka
+                </span>
+              </div>
+              <div className="flex items-center gap-2 whitespace-nowrap">
+                <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#94A3B8" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="shrink-0">
+                  <rect x="4" y="2" width="16" height="20" rx="1" /><path d="M9 22v-4h6v4" />
+                  <path d="M8 6h.01" /><path d="M16 6h.01" /><path d="M8 10h.01" /><path d="M16 10h.01" /><path d="M8 14h.01" /><path d="M16 14h.01" />
+                </svg>
+                <span className="text-[13px] text-[var(--muted)]">
+                  <span className="text-[var(--dark)] font-medium">Branch —</span> Guwahati, Assam
+                </span>
+              </div>
+            </div>
+          </div>
+
+          {/* Column 2: Solutions */}
           <div>
             <div className="text-[15px] font-semibold text-[var(--dark)] mb-5">Solutions</div>
             <div className="flex flex-col gap-3.5">
@@ -24,7 +67,7 @@ export default function Footer() {
             </div>
           </div>
 
-          {/* Column 2: Industries */}
+          {/* Column 3: Industries */}
           <div>
             <div className="text-[15px] font-semibold text-[var(--dark)] mb-5">Industries</div>
             <div className="flex flex-col gap-3.5">
@@ -37,7 +80,7 @@ export default function Footer() {
             </div>
           </div>
 
-          {/* Column 3: Company */}
+          {/* Column 4: Company */}
           <div>
             <div className="text-[15px] font-semibold text-[var(--dark)] mb-5">Company</div>
             <div className="flex flex-col gap-3.5">
@@ -45,26 +88,16 @@ export default function Footer() {
               <Link href="#technology" className="text-[13px] text-[var(--muted)] hover:text-[var(--dark)] transition-colors">Technology</Link>
               <Link href="#" className="text-[13px] text-[var(--muted)] hover:text-[var(--dark)] transition-colors">Safety</Link>
               <Link href="#fleet" className="text-[13px] text-[var(--muted)] hover:text-[var(--dark)] transition-colors">Fleet</Link>
-              <Link href="https://wa.me/918277840505?text=Hi%20Connect%20Cabs%2C%20I%20would%20like%20to%20know%20more%20about%20your%20services." target="_blank" className="text-[13px] text-[var(--muted)] hover:text-[var(--dark)] transition-colors">Contact</Link>
+              <Link href="https://wa.me/918277840505?text=Hi%20ConnectCabs%2C%20I%20would%20like%20to%20know%20more%20about%20your%20services." target="_blank" className="text-[13px] text-[var(--muted)] hover:text-[var(--dark)] transition-colors">Contact</Link>
             </div>
           </div>
 
-          {/* Column 4: Legal */}
+          {/* Column 5: Legal */}
           <div>
             <div className="text-[15px] font-semibold text-[var(--dark)] mb-5">Legal</div>
             <div className="flex flex-col gap-3.5">
               <Link href="#" className="text-[13px] text-[var(--muted)] hover:text-[var(--dark)] transition-colors">Privacy Policy</Link>
               <Link href="#" className="text-[13px] text-[var(--muted)] hover:text-[var(--dark)] transition-colors">Terms of Use</Link>
-            </div>
-          </div>
-
-          {/* Column 5: Contact */}
-          <div>
-            <div className="text-[15px] font-semibold text-[var(--dark)] mb-5">Contact</div>
-            <div className="flex flex-col gap-3.5">
-              <span className="text-[13px] text-[var(--muted)]">hello@connectcabsindia.com</span>
-              <span className="text-[13px] text-[var(--muted)]">+91-8277840505</span>
-              <span className="text-[13px] text-[var(--muted)]">Bhubaneswar, Odisha, India</span>
             </div>
           </div>
 
@@ -79,12 +112,12 @@ export default function Footer() {
             onClick={(e) => { e.preventDefault(); window.scrollTo({ top: 0, behavior: "smooth" }); }}
             className="cursor-pointer"
           >
-            <Image src="/logo-icon.png" alt="Connect Cabs" width={100} height={100} className="h-8 w-auto" />
+            <Image src="/logo-icon.png" alt="ConnectCabs" width={100} height={100} className="h-8 w-auto" />
           </a>
 
           {/* Copyright */}
           <span className="text-[12px] text-[var(--muted-light)]">
-            © {new Date().getFullYear()} Connect Cabs Private Limited. All rights reserved.
+            © {new Date().getFullYear()} ConnectCabs Private Limited. All rights reserved.
           </span>
 
           {/* Social Icons */}
@@ -118,7 +151,7 @@ export default function Footer() {
 
             {/* WhatsApp */}
             
-            <a   href="https://wa.me/918277840505?text=Hi%20Connect%20Cabs%2C%20I%20would%20like%20to%20know%20more%20about%20your%20services."
+            <a   href="https://wa.me/918277840505?text=Hi%20ConnectCabs%2C%20I%20would%20like%20to%20know%20more%20about%20your%20services."
               target="_blank"
               className="w-8 h-8 rounded-lg bg-[var(--off-white)] flex items-center justify-center hover:bg-[var(--border)] transition-colors"
             >

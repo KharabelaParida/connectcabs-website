@@ -10,7 +10,7 @@ const links = [
   { label: "Technology", href: "#technology" },
   { label: "Industries", href: "#industries" },  
   { label: "Fleet", href: "#fleet" },
-  { label: "About", href: "#about" },
+  { label: "About", href: "/about" },
 ];
 
 export default function Navbar() {
@@ -25,19 +25,16 @@ export default function Navbar() {
 
   return (
     <nav
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300
-        ${scrolled
-          ? "bg-white/82 border-b border-[var(--border)] shadow-[0_2px_16px_rgba(11,31,58,0.06)]"
-          : "bg-transparent border-b border-[#F1F5F9]"
-        }`}
-      style={{ backdropFilter: scrolled ? "blur(16px)" : "none", WebkitBackdropFilter: scrolled ? "blur(16px)" : "none" }}
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-white/95 border-b border-[var(--border)]
+        ${scrolled ? "shadow-[0_2px_16px_rgba(11,31,58,0.06)]" : ""}`}
+      style={{ backdropFilter: "blur(16px)", WebkitBackdropFilter: "blur(16px)" }}
     >
       <div className="max-w-[1200px] mx-auto px-6 flex items-center justify-between py-4">
 
         {/* Logo: icon + text */}
         <Link href="/" className="flex items-center gap-.5">
           <Image src="/logo-icon.png" alt="ConnectCabs" width={200} height={200} className="h-13 w-auto" priority />
-          <span className="text-[22px] font-extrabold text-[var(--dark)] tracking-tight">
+          <span className="text-[22px] font-extrabold tracking-tight text-[var(--dark)]">
             CONNECT<span className="text-[var(--gold)]">CABS</span>
           </span>
         </Link>
@@ -70,7 +67,7 @@ export default function Navbar() {
         {/* Hamburger */}
         <button
           onClick={() => setMobileOpen(!mobileOpen)}
-          className="md:hidden p-2"
+          className="md:hidden p-2 text-[var(--dark)]"
           aria-label="Menu"
         >
           <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">

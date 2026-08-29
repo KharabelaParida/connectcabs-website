@@ -5,11 +5,11 @@ import Image from "next/image";
 import Link from "next/link";
 
 const links = [
-  { label: "Solutions", href: "#solutions" },
-  { label: "Services", href: "#services" },
-  { label: "Technology", href: "#technology" },
-  { label: "Industries", href: "#industries" },  
-  { label: "Fleet", href: "#fleet" },
+  { label: "Solutions", href: "/solutions" },
+  { label: "Services", href: "/services" },
+  { label: "Technology", href: "/technology" },
+  { label: "Industries", href: "/industries" },  
+  { label: "Fleet", href: "/fleet" },
   { label: "About", href: "/about" },
 ];
 

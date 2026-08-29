@@ -4,8 +4,8 @@ import FadeIn from "@/components/FadeIn";
 import Link from "next/link";
 
 const glance = [
-  { num: "2026", label: "Founded" },
-  { num: "2 cities", label: "Bhubaneswar & Guwahati" },
+  { num: "2025", label: "Founded" },
+  { num: "2 Cities", label: "Bhubaneswar & Guwahati" },
   { num: "43+ yrs", label: "Combined leadership experience" },
   { num: "24x7", label: "Customer support" },
 ];
